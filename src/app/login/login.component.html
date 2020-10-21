@@ -1,9 +1,8 @@
 <div class="container">
-  <label> Username : </label>
-  <input type="text" name="username" placeholder="Enter Username" [(ngModel)]="username">
-  <br><br>
-  <label> Password : </label>
-  <input type="password" name="password" placeholder="Enter Password" value="{{password}}">
-  <br><br>
-  <button (click)=handleLogin()>Login</button>
+    <h4 *ngIf='invalidLogin'>{{errorMessage}}</h4>
+    Username : <input type="text" name="username" placeholder="Enter Username" [(ngModel)]="username">
+    <br><br> Password : <input type="password" name="password" placeholder="Enter Password" [(ngModel)]="password">
+    <br><br>
+    <button (click)=handleLogin()>Login</button>
+    <br><br> Username : {{username}}
 </div>
