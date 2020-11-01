@@ -1,0 +1,10 @@
+.middleWelcome {
+    position: absolute;
+    top: 70px;
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}

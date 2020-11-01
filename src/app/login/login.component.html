@@ -1,7 +1,9 @@
 <div class="container">
-    <h4 *ngIf="invalidLogin">{{ errorMessage }}</h4>
-    Username :
-    <input type="text" name="username" [(ngModel)]="username" /> Password :
-    <input type="password" name="password" [(ngModel)]="password" />
-    <button (click)="handleLogin()">Login</button> Username : {{ username }}
+    <div class="middle">
+        <div class="alert alert-warning" *ngIf="invalidLogin">{{ errorMessage }}</div>
+        <input type="text" name="username" [(ngModel)]="username" placeholder="username" /><br /><br />
+        <input type="password" name="password" [(ngModel)]="password" placeholder="password" /><br /><br />
+        <button (click)="handleLogin()" class="btn btn-success">Login</button> <br /><br />
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </div>
 </div>
